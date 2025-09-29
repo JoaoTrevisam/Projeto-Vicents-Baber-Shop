@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Agendamentos - Ari</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>Agendamentos — Ari</h1>
+      <p>Simples demo de tela de agendamento com notificações WhatsApp</p>
+    </header>
+
+    <main>
+      <section class="booking">
+        <h2>Novo agendamento</h2>
+
+        <label>Cliente (nome):
+          <input id="clientName" placeholder="Nome do cliente">
+        </label>
+
+        <label>Telefone (WhatsApp, com +55):
+          <input id="clientPhone" placeholder="+55119XXXXXXXX">
+        </label>
+
+        <label>Serviço:
+          <select id="serviceSelect">
+            <option value='{"name":"Corte","minutes":30}'>Corte — 30 min</option>
+            <option value='{"name":"Barba","minutes":20}'>Barba — 20 min</option>
+            <option value='{"name":"Corte + Barba","minutes":50}'>Corte + Barba — 50 min</option>
+          </select>
+        </label>
+
+        <label>Data:
+          <input type="date" id="dateInput">
+        </label>
+
+        <button id="checkSlots">Ver horários disponíveis</button>
+
+        <div id="slots"></div>
+
+        <div id="message" class="message"></div>
+      </section>
+
+      <section class="bookings-list">
+        <h2>Próximos agendamentos</h2>
+        <ul id="bookings"></ul>
+      </section>
+    </main>
+
+    <footer>
+      <small>Demo — adaptar para produção (persistência, autenticação, integração Google Calendar e WhatsApp).</small>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+:root {
+  --primary:#2a7ae2;
+  --bg:#f6f9ff;
+  --card:#fff;
+}
+*{box-sizing:border-box;font-family:Inter,system-ui,Arial;}
+body{margin:0;background:var(--bg);color:#222;padding:24px;}
+.app{max-width:900px;margin:0 auto;}
+header h1{margin:0 0 4px;}
+main{display:flex;gap:24px;margin-top:18px;align-items:flex-start;}
+.booking, .bookings-list{background:var(--card);padding:16px;border-radius:8px;box-shadow:0 6px 18px rgba(20,20,60,0.06);}
+.booking{flex:1;}
+.bookings-list{width:320px;}
+label{display:block;margin:10px 0;font-size:14px;}
+input, select, button{width:100%;padding:8px;border:1px solid #d7dbe8;border-radius:6px;font-size:14px;}
+button{background:var(--primary);color:#fff;border:none;cursor:pointer;}
+#slots{margin-top:12px;display:flex;flex-wrap:wrap;gap:8px;}
+.slot-btn{padding:8px 10px;border:1px solid #e0e6f3;border-radius:6px;background:#fff;cursor:pointer;}
+.slot-btn.booked{opacity:0.5;cursor:not-allowed;}
+.message{margin-top:12px;color:green;}
+footer{margin-top:18px;text-align:center;color:#666;}
